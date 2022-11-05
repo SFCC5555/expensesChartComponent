@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --fontOne:'DM Sans', sans-serif;
+    --softRed: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+    --purple: hsl(228, 45%, 44%);
+}
+
+body {
+    font-family: var(--fontOne);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+}
+
+main {
+    width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blockOne {
+    width: 100%;
+    height: 100px;
+    background-color: var(--softRed);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.balanceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.balanceText {
+    color: var(--veryPaleOrange);
+    font-size: 1.4rem;
+    margin-bottom: 3px;
+}
+
+.balanceValue {
+    color: var(--veryPaleOrange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.iconContainer {
+    display: inline-block;
+    width: 72px;
+    height: 48px;
+    background-image: url(./images/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blockTwo {
+    width: 100%;
+    height: 390px;
+    background-color: var(--veryPaleOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+.spendingContainer {
+    color: var(--darkBrown);
+    font-size: 2.5rem;
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.chartContainer {
+    width: 100%;
+    height: 325px;
+    margin-bottom: 15px;
+    padding: 15px 0px;
+    border-bottom: 3px solid var(--cream);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.inactiveValue {
+    color:var(--veryPaleOrange);
+    background-color: var(--veryPaleOrange);
+    padding: 5px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+}
+
+.value {
+    color:var(--veryPaleOrange);
+    background-color: var(--darkBrown);
+    padding: 5px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+}
+
+.bar {
+    background-color: var(--softRed);
+    width: 30px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.barCurrentDay {
+    background-color: var(--cyan);
+    width: 30px;
+    border-radius: 2.5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.bar:hover, .barCurrentDay:hover {
+    opacity: 75%;
+}
+
+.day {
+    color: var(--mediumBrown);
+}
+
+.resumeContainer {
+    width: 100%;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.totalMonthContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.totalMonthText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--mediumBrown);
+    margin-bottom: 5px;
+}
+
+.totalMonthValue {
+    font-size: 2.5rem;
+    color: var(--darkBrown);
+    font-weight: bold;
+}
+
+.lastMonthContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.lastMonthValue {
+    font-size: 1.3rem;
+    color: var(--darkBrown);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.lastMonthText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--mediumBrown);
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    position: absolute;
+    top: 96%;
+}
+
+.attribution a {
+    color: var(--purple);
+}
