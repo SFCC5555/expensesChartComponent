@@ -2,10 +2,14 @@ let chartContainer = document.querySelector(".chartContainer");
 
 let hoy = new Date();
 
+console.log(hoy.getDay())
+
 fetch("./data.json")
   .then(response => response.json())
   .then(data => {
-    count=0
+    count=-1
+
+    days=[1,2,3,4,5,6,0]
 
     for (i of data) {
         count++
@@ -20,7 +24,7 @@ fetch("./data.json")
         chart.appendChild(value);
 
         bar=document.createElement("div");
-        if (count==hoy.getDay()) {
+        if (days[count]==hoy.getDay()) {
             bar.setAttribute("class","barCurrentDay");
         }
 
